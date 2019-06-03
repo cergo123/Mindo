@@ -27,7 +27,7 @@ This android library intends to apply a view for Mind Maps / Hierarchy views eas
 
 ```groovy
 	dependencies {
-	        implementation 'com.github.JagarYousef:Mindo:1.0.0'
+	        implementation 'com.github.JagarYousef:Mindo:1.0.1'
 	}
 ```
 
