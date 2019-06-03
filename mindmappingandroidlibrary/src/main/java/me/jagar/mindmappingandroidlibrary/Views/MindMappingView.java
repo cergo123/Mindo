@@ -365,7 +365,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(activity, color));
+        paint.setColor(ContextCompat.getColor(context, color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -395,7 +395,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(activity, color));
+        paint2.setColor(ContextCompat.getColor(context, color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2-arrowSize/2, y2+arrowSize);
@@ -451,7 +451,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(activity, color));
+        paint.setColor(ContextCompat.getColor(context, color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -482,7 +482,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(activity, color));
+        paint2.setColor(ContextCompat.getColor(context, color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2+arrowSize, y2-arrowSize/2);
@@ -547,7 +547,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(activity, color));
+        paint.setColor(ContextCompat.getColor(context, color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -578,7 +578,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(activity, color));
+        paint2.setColor(ContextCompat.getColor(context, color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2-arrowSize, y2-arrowSize/2);
@@ -643,7 +643,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(activity, color));
+        paint.setColor(ContextCompat.getColor(context, color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -673,7 +673,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(activity, color));
+        paint2.setColor(ContextCompat.getColor(context, color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2-arrowSize/2, y2-arrowSize);
@@ -780,7 +780,7 @@ public class MindMappingView extends RelativeLayout {
             paint.setAntiAlias(true);
             paint.setStyle(Paint.Style.STROKE);
             paint.setStrokeWidth(custom_width);
-            paint.setColor(ContextCompat.getColor(activity, custom_color));
+            paint.setColor(ContextCompat.getColor(context, custom_color));
             paint.setStrokeCap(Paint.Cap.ROUND);
 
             paint.setPathEffect(new DashPathEffect(new float[] {10,20}, 0));
