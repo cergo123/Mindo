@@ -80,7 +80,7 @@ mindMappingView.addItem(child, item, 200, 10, ItemLocation.TOP, true, connection
 - Adding a `CustomConnection` in the case where there is no root and child: 
 
 ```java
-mindMappingView.addCustomConnection(child1, ItemLocation.BOTTOM, child2, ItemLocation.RIGHT, connectionTextMessage,  5,R.color.orange, 10, 15);
+mindMappingView.addCustomConnection(child1, ItemLocation.BOTTOM, child2, ItemLocation.RIGHT, connectionTextMessage,  5,"#000000", 10, 15);
 ```
 
 
