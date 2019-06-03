@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -29,7 +30,8 @@ public class MindMappingView extends RelativeLayout {
     private ArrayList<Connection> rightItems = new ArrayList<>();
     private ArrayList<Connection> bottomItems = new ArrayList<>();
     private ArrayList<CustomConnection> customConnections = new ArrayList<>();
-    private int connectionColor = R.color.red, connectionWidth = 10, connectionArrowSize = 30, connectionCircRadius = 20, connectionArgSize = 30;
+    private int connectionWidth = 10, connectionArrowSize = 30, connectionCircRadius = 20, connectionArgSize = 30;
+    private String connectionColor = "#000000";
     private MindMappingView mindMappingView;
     private OnItemClicked onItemClicked;
 
@@ -57,11 +59,11 @@ public class MindMappingView extends RelativeLayout {
 
     //Getters & Setters
 
-    public int getConnectionColor() {
+    public String getConnectionColor() {
         return connectionColor;
     }
 
-    public void setConnectionColor(int connectionColor) {
+    public void setConnectionColor(String connectionColor) {
         this.connectionColor = connectionColor;
     }
 
@@ -348,7 +350,7 @@ public class MindMappingView extends RelativeLayout {
         int arrowSize = connectionArrowSize;
         int lineWidth = connectionWidth;
         int argExt = connectionArgSize;
-        int color = connectionColor;
+        String color = connectionColor;
 
         if (connection.getCircRadius() > 0)
             radius = connection.getCircRadius();
@@ -365,7 +367,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(context, color));
+        paint.setColor(Color.parseColor(color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -395,7 +397,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(context, color));
+        paint2.setColor(Color.parseColor(color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2-arrowSize/2, y2+arrowSize);
@@ -434,7 +436,7 @@ public class MindMappingView extends RelativeLayout {
         int arrowSize = connectionArrowSize;
         int lineWidth = connectionWidth;
         int argExt = connectionArgSize;
-        int color = connectionColor;
+        String color = connectionColor;
 
         if (connection.getCircRadius() > 0)
             radius = connection.getCircRadius();
@@ -451,7 +453,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(context, color));
+        paint.setColor(Color.parseColor(color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -482,7 +484,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(context, color));
+        paint2.setColor(Color.parseColor(color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2+arrowSize, y2-arrowSize/2);
@@ -530,7 +532,7 @@ public class MindMappingView extends RelativeLayout {
         int arrowSize = connectionArrowSize;
         int lineWidth = connectionWidth;
         int argExt = connectionArgSize;
-        int color = connectionColor;
+        String color = connectionColor;
 
         if (connection.getCircRadius() > 0)
             radius = connection.getCircRadius();
@@ -547,7 +549,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(context, color));
+        paint.setColor(Color.parseColor(color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -578,7 +580,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(context, color));
+        paint2.setColor(Color.parseColor(color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2-arrowSize, y2-arrowSize/2);
@@ -626,7 +628,7 @@ public class MindMappingView extends RelativeLayout {
         int arrowSize = connectionArrowSize;
         int lineWidth = connectionWidth;
         int argExt = connectionArgSize;
-        int color = connectionColor;
+        String color = connectionColor;
 
         if (connection.getCircRadius() > 0)
             radius = connection.getCircRadius();
@@ -643,7 +645,7 @@ public class MindMappingView extends RelativeLayout {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(lineWidth);
-        paint.setColor(ContextCompat.getColor(context, color));
+        paint.setColor(Color.parseColor(color));
         paint.setStrokeCap(Paint.Cap.ROUND);
 
         final Path path = new Path();
@@ -673,7 +675,7 @@ public class MindMappingView extends RelativeLayout {
         paint2.setAntiAlias(true);
         paint2.setStyle(Paint.Style.FILL);
         paint2.setStrokeWidth(lineWidth);
-        paint2.setColor(ContextCompat.getColor(context, color));
+        paint2.setColor(Color.parseColor(color));
         paint2.setStrokeCap(Paint.Cap.ROUND);
 
         Point point1 = new Point(x2-arrowSize/2, y2-arrowSize);
@@ -707,7 +709,7 @@ public class MindMappingView extends RelativeLayout {
 
     //Adding custom connection (straight line with 2 circles)
     public void addCustomConnection(Item item1, int position1, Item item2, int position2,ConnectionTextMessage connectionTextMessage,
-                                    int width, int color, int circRadius1, int circRadius2){
+                                    int width, String color, int circRadius1, int circRadius2){
         CustomConnection customConnection = new CustomConnection(item1, item2, connectionTextMessage, width, circRadius1,
                 circRadius2, color, position1, position2);
         customConnections.add(customConnection);
@@ -724,7 +726,7 @@ public class MindMappingView extends RelativeLayout {
             Item item2 = customConnection.getItem2();
             int position2 = customConnection.getPosition2();
             int custom_width = customConnection.getWidth();
-            int custom_color = customConnection.getColor();
+            String custom_color = customConnection.getColor();
             int custom_circRadius2 = customConnection.getCircRadius2();
             int custom_circRadius1 = customConnection.getCircRadius1();
 
@@ -780,7 +782,7 @@ public class MindMappingView extends RelativeLayout {
             paint.setAntiAlias(true);
             paint.setStyle(Paint.Style.STROKE);
             paint.setStrokeWidth(custom_width);
-            paint.setColor(ContextCompat.getColor(context, custom_color));
+            paint.setColor(Color.parseColor(custom_color));
             paint.setStrokeCap(Paint.Cap.ROUND);
 
             paint.setPathEffect(new DashPathEffect(new float[] {10,20}, 0));

@@ -105,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
         mindMappingView.addItem(child4, item, 400, 10, ItemLocation.BOTTOM, true, connectionTextMessage4);
         mindMappingView.addItem(item1, child2, 400, 50, ItemLocation.BOTTOM, true, test);
 
-        mindMappingView.setConnectionColor(R.color.red);
+        //mindMappingView.setConnectionColor("#");
 
         mindMappingView.addCustomConnection(child3, ItemLocation.BOTTOM, item1, ItemLocation.RIGHT, connectionTextMessage,  5,
-                R.color.orange, 10, 15);
+                "#000000", 10, 15);
 
         ConnectionTextMessage ideaConnection = new ConnectionTextMessage(MainActivity.this);
         ideaConnection.setBackgroundResource(R.drawable.idea_bg);

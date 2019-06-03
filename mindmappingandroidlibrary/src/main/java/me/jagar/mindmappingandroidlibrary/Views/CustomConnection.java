@@ -3,11 +3,12 @@ package me.jagar.mindmappingandroidlibrary.Views;
 public class CustomConnection {
     public Item item1, item2;
     public ConnectionTextMessage connectionTextMessage;
-    public int width, circRadius1, circRadius2, color;
+    public int width, circRadius1, circRadius2;
     public int position1, position2;
+    public String color;
 
     public CustomConnection(Item item1, Item item2, ConnectionTextMessage connectionTextMessage, int width,
-                            int circRadius1, int circRadius2, int color, int position1, int position2) {
+                            int circRadius1, int circRadius2, String color, int position1, int position2) {
         this.item1 = item1;
         this.item2 = item2;
         this.connectionTextMessage = connectionTextMessage;
@@ -67,11 +68,11 @@ public class CustomConnection {
         this.circRadius2 = circRadius2;
     }
 
-    public int getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(int color) {
+    public void setColor(String color) {
         this.color = color;
     }
 

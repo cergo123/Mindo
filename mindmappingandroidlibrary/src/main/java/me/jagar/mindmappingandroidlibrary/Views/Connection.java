@@ -3,7 +3,8 @@ package me.jagar.mindmappingandroidlibrary.Views;
 public class Connection {
     public Item item, parent;
     public ConnectionTextMessage connectionTextMessage;
-    public int width, circRadius, arrowSize, color, argExt;
+    public int width, circRadius, arrowSize, argExt;
+    public String color;
 
     public Connection(Item item, Item parent) {
         this.item = item;
@@ -56,11 +57,11 @@ public class Connection {
         this.arrowSize = arrowSize;
     }
 
-    public int getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(int color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
