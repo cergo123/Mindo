@@ -1,6 +1,6 @@
 This android library intends to apply a view for Mind Maps / Hierarchy views easily in Android.
 
-<center><img src="https://user-images.githubusercontent.com/41321155/58769543-b3df3980-85b0-11e9-84d5-4815636677e5.png"></img></center>
+<center><img src="https://user-images.githubusercontent.com/41321155/58798331-051c1700-860b-11e9-9359-7a2b21eea069.gif"></img></center>
 
 ## Features: 
 
