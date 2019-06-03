@@ -9,7 +9,6 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -17,9 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import java.util.ArrayList;
-
 import me.jagar.mindmappingandroidlibrary.Listeners.OnItemClicked;
-import me.jagar.mindmappingandroidlibrary.R;
 
 public class MindMappingView extends RelativeLayout {
 
@@ -424,7 +421,7 @@ public class MindMappingView extends RelativeLayout {
             connectionTextMessage.setY(y2_to_trg);
 
         }else if (argExt > 0){
-            canvas.drawCircle(x2, y2_to_trg-radius, radius, paint2);
+            canvas.drawCircle(x2, y2_to_trg+radius, radius, paint2);
         }
 
 

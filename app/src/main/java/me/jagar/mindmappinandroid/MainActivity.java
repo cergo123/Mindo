@@ -99,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mindMappingView.addItem(child, item, 200, 10, ItemLocation.TOP, true, connectionTextMessage);
-        mindMappingView.addItem(child2, item, 200, 10, ItemLocation.LEFT, true, connectionTextMessage2);
-        mindMappingView.addItem(child3, item, 200, 10, ItemLocation.RIGHT, true, connectionTextMessage3);
-        mindMappingView.addItem(child4, item, 400, 10, ItemLocation.BOTTOM, true, connectionTextMessage4);
+        mindMappingView.addItem(child, item, 200, 10, ItemLocation.TOP, true, null);
+        mindMappingView.addItem(child2, item, 200, 10, ItemLocation.LEFT, true, null);
+        mindMappingView.addItem(child3, item, 200, 10, ItemLocation.RIGHT, true, null);
+        mindMappingView.addItem(child4, item, 400, 10, ItemLocation.BOTTOM, true, null);
         mindMappingView.addItem(item1, child2, 400, 50, ItemLocation.BOTTOM, true, test);
 
         //mindMappingView.setConnectionColor("#");
