@@ -43,6 +43,7 @@ This android library intends to apply a view for Mind Maps / Hierarchy views eas
     android:background="#C4B8B8"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
+<!---You need to add background to display connections-->
 ```
 
 2. After initialization in the activity you can use it to add the root (Central Item) and other items  in parent/item pairs.

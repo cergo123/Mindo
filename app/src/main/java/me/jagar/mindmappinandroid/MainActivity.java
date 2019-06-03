@@ -20,8 +20,9 @@ import me.jagar.mindmappingandroidlibrary.Helpers.SaveAs;
 import me.jagar.mindmappingandroidlibrary.Listeners.OnItemClicked;
 import me.jagar.mindmappingandroidlibrary.Views.ConnectionTextMessage;
 import me.jagar.mindmappingandroidlibrary.Views.Item;
-import me.jagar.mindmappingandroidlibrary.Views.MindMappingView;
 import me.jagar.mindmappingandroidlibrary.Views.ItemLocation;
+import me.jagar.mindmappingandroidlibrary.Views.MindMappingView;
+
 
 public class MainActivity extends AppCompatActivity {
 
