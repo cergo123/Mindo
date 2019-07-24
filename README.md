@@ -1,8 +1,7 @@
-
 <img src="https://img.shields.io/github/license/JagarYousef/Mindo.svg" />
 <br>
 This android library intends to apply a view for Mind Maps / Hierarchy views easily in Android.
-<br>
+<br><br>
 <center><img src="https://user-images.githubusercontent.com/41321155/58798331-051c1700-860b-11e9-9359-7a2b21eea069.gif"></img></center>
 
 ## Features: 
