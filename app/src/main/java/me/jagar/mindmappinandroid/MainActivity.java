@@ -10,6 +10,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -146,10 +147,18 @@ public class MainActivity extends AppCompatActivity {
         mindMappingView.addItem(leave8, child2, 200, 0, ItemLocation.LEFT,  true, null);
 
 
-        mindMappingView.setOnClickListener(new View.OnClickListener() {
+        mindMappingView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View view) {
+            public boolean onLongClick(View view) {
                 checkPermissions();
+                return false;
+            }
+        });
+
+        mindMappingView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return false;
             }
         });
 
@@ -186,8 +195,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == ALL_PERMISSIONS){
             if ((grantResults.length > 0) &&
                     (grantResults[0]
-                            + grantResults[1]
-                            + grantResults[2] == PackageManager.PERMISSION_GRANTED)){
+                            + grantResults[1] == PackageManager.PERMISSION_GRANTED)){
                 SaveAs.saveAsImage(mindMappingView, Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator +
                         "image.jpg");
 
