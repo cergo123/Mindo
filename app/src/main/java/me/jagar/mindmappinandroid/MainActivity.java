@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         mindMappingView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
+                mindMappingView.init(MainActivity.this);
                 return false;
             }
         });
