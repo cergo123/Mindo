@@ -8,6 +8,7 @@ This android library intends to apply a view for Mind Maps / Hierarchy views eas
 - Create complicated items and connections easily
 - Flexibility (Custom connections, distance, full control of shapes)
 - Save the view directly as an image
+- Zooming and Scrolling of the view (v2.x.x and above)
 
 
 
