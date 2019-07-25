@@ -4,13 +4,12 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -147,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         mindMappingView.addItem(leave8, child2, 200, 0, ItemLocation.LEFT,  true, null);
 
 
-        mindMappingView.setOnLongClickListener(new View.OnLongClickListener() {
+       mindMappingView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 checkPermissions();
@@ -155,13 +154,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mindMappingView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                mindMappingView.init(MainActivity.this);
-                return false;
-            }
-        });
+
 
     }
 

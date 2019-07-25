@@ -3,6 +3,8 @@ package me.jagar.mindmappingandroidlibrary.Helpers;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.view.View;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -17,7 +19,12 @@ public class SaveAs {
 
         mindMappingView.setDrawingCacheEnabled(true);
         mindMappingView.buildDrawingCache();
-        Bitmap bm = Bitmap.createBitmap(mindMappingView.getDrawingCache());
+        Bitmap bm = null;
+        if (mindMappingView.getDrawingCache() == null){
+            bm = loadLargeBitmapFromView(mindMappingView);
+        }else{
+            bm = Bitmap.createBitmap(mindMappingView.getDrawingCache());
+        }
         mindMappingView.setDrawingCacheEnabled(false); // clear drawing cache
         Intent share = new Intent(Intent.ACTION_SEND);
         share.setType("image/jpg");
@@ -34,5 +41,15 @@ public class SaveAs {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Bitmap loadLargeBitmapFromView(View v)
+    {
+        Bitmap b = Bitmap.createBitmap(v.getWidth(), v.getHeight(), Bitmap.Config.ARGB_8888);
+
+        Canvas c = new Canvas(b);
+        v.layout(0, 0, v.getLayoutParams().width, v.getLayoutParams().height);
+        v.draw(c);
+        return b;
     }
 }

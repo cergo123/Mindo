@@ -9,17 +9,15 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+
 import java.util.ArrayList;
+
 import me.jagar.mindmappingandroidlibrary.Listeners.OnItemClicked;
 
 public class MindMappingView extends RelativeLayout {
@@ -109,13 +107,13 @@ public class MindMappingView extends RelativeLayout {
 
         item.setGravity(CENTER_IN_PARENT);
         this.setGravity(Gravity.CENTER);
-
         if (dragAble){
             dragItem(item);
         }
 
 
         this.addView(item);
+
     }
     /*Make any item drag able, This will make issues with
     a simple call of OnClickListener on the Item objects so you set it off to call the normal onclicklistener
@@ -128,8 +126,8 @@ public class MindMappingView extends RelativeLayout {
         item.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
                 switch (motionEvent.getAction()) {
+
                     case MotionEvent.ACTION_DOWN:
                         dX[0] = view.getX() - motionEvent.getRawX();
                         dY[0] = view.getY() - motionEvent.getRawY();
@@ -158,6 +156,7 @@ public class MindMappingView extends RelativeLayout {
     //Adding an item that has the parent already on the view
     public void addItem(Item item, Item parent, int distance, int spacing, int location,
                         boolean dragAble, ConnectionTextMessage connectionTextMessage){
+
         if (location == ItemLocation.TOP){
 
             this.addView(item);
@@ -271,6 +270,7 @@ public class MindMappingView extends RelativeLayout {
             if (dragAble)
                 dragItem(item);
         }
+
     }
 
     //Draw connections
@@ -812,6 +812,7 @@ public class MindMappingView extends RelativeLayout {
     public void  setOnItemClicked(OnItemClicked onItemClicked){
         this.onItemClicked = onItemClicked;
     }
+
 
 
 
