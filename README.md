@@ -3,7 +3,6 @@
 This android library intends to apply a view for Mind Maps / Hierarchy views easily in Android.
 <br><br>
 <center><img src="https://user-images.githubusercontent.com/41321155/58798331-051c1700-860b-11e9-9359-7a2b21eea069.gif"></img></center>
-
 ## Features: 
 
 - Create complicated items and connections easily
@@ -29,7 +28,7 @@ This android library intends to apply a view for Mind Maps / Hierarchy views eas
 
 ```groovy
 	dependencies {
-	        implementation 'com.github.JagarYousef:Mindo:1.0.3'
+	        implementation 'com.github.JagarYousef:Mindo:2.0.0'
 	}
 ```
 
@@ -117,6 +116,57 @@ mindMappingView.setOnItemClicked(new OnItemClicked() {
 ```
 
 
+
+## Zooming:
+
+From version 2.0.0 you are able to include the MindMappingView inside a ZoomLayout that comes with too many options of  zooming and scrolling, BUT it is highly recommended to keep the MindMappingView in a fixed size when using this feature,  like the example below: 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<me.jagar.mindmappingandroidlibrary.Zoom.ZoomLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical|horizontal"
+    app:transformation="centerInside"
+    app:transformationGravity="auto"
+    app:alignment="center"
+    app:overScrollHorizontal="true"
+    app:overScrollVertical="true"
+    app:overPinchable="true"
+    app:horizontalPanEnabled="true"
+    app:verticalPanEnabled="true"
+    app:zoomEnabled="true"
+    app:flingEnabled="false"
+    app:scrollEnabled="true"
+    app:oneFingerScrollEnabled="false"
+    app:twoFingersScrollEnabled="true"
+    app:threeFingersScrollEnabled="true"
+    app:minZoom="0.7"
+    app:minZoomType="zoom"
+    app:maxZoom="2.5"
+    app:maxZoomType="zoom"
+    app:animationDuration="280"
+    app:hasClickableChildren="true">
+        <me.jagar.mindmappingandroidlibrary.Views.MindMappingView
+            android:layout_width="1000dp"
+            android:background="#C4B8B8"
+            android:id="@+id/mind_mapping_view"
+            android:layout_height="1000dp" />
+</me.jagar.mindmappingandroidlibrary.Zoom.ZoomLayout>
+```
+You can  control the zoom layout programmatically like below:
+```java
+zoomLayout.panTo(x, y, true); // Shorthand for zoomLayout.getEngine().panTo(x, y, true)
+zoomLayout.panBy(deltaX, deltaY, true);
+zoomLayout.zoomTo(zoom, true);
+zoomLayout.zoomBy(factor, true);
+zoomLayout.realZoomTo(realZoom, true);
+zoomLayout.moveTo(zoom, x, y, true);
+```
 
 ## Customization:
 
